@@ -1,0 +1,41 @@
+{
+  "name": "nwb-electron-starter",
+  "productName": "My Electron App",
+  "version": "1.0.0",
+  "description": "Describe nwb-electron-starter here",
+  "main": "dist/index.js",
+  "private": true,
+  "scripts": {
+    "build": "nwb build && babel main -d dist && npm run package",
+    "watch-electron-main": "babel main -d dist -w",
+    "clean": "nwb clean",
+    "start": "babel main -d dist && npm run server",
+    "server": "node dev-server.js --run-electron",
+    "test": "nwb test",
+    "test:watch": "nwb test --server",
+    "package": "rm -rf ./release && electron-packager --overwrite --asar='true' --ignore='src|main|tests' --prune --platform=darwin --arch=x64 --out='release' ."
+  },
+  "dependencies": {
+    "component-directory-webpack-plugin": "^1.0.5",
+    "electron-devtools-installer": "^2.1.0",
+    "electron-window-state": "^4.0.2",
+    "flex-component": "^0.1.3",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "electron": "^1.6.1",
+    "electron-packager": "^8.5.2",
+    "express": "^4.14.1",
+    "minimist": "^1.2.0",
+    "nwb": "^0.15.6",
+    "nwb-sass": "^0.7.1",
+    "webpack": "^2.2.1"
+  },
+  "author": "",
+  "license": "MIT",
+  "repository": ""
+}
