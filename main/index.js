@@ -15,6 +15,11 @@ function createWindow () {
   installExtension(REACT_DEVELOPER_TOOLS)
     .then(name => {
       let { width, height } = screen.getPrimaryDisplay().workAreaSize
+
+      Menu.setApplicationMenu(
+        Menu.buildFromTemplate(template)
+      )
+
       let mainWindowState = windowStateKeeper({
         defaultWidth: width * 0.9,
         defaultHeight: height * 0.9
