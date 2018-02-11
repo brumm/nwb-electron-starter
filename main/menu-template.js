@@ -1,5 +1,5 @@
 import electron from 'electron'
-const { app }  = electron
+const { app } = electron
 const { name } = app
 
 const template = [
@@ -8,42 +8,44 @@ const template = [
     submenu: [
       {
         label: 'About ' + name,
-        role: 'about'
+        role: 'about',
       },
       {
-        type: 'separator'
+        type: 'separator',
       },
       {
         label: 'Services',
         role: 'services',
-        submenu: []
+        submenu: [],
       },
       {
-        type: 'separator'
+        type: 'separator',
       },
       {
         label: 'Hide ' + name,
         accelerator: 'Command+H',
-        role: 'hide'
+        role: 'hide',
       },
       {
         label: 'Hide Others',
         accelerator: 'Command+Shift+H',
-        role: 'hideothers'
+        role: 'hideothers',
       },
       {
         label: 'Show All',
-        role: 'unhide'
+        role: 'unhide',
       },
       {
-        type: 'separator'
+        type: 'separator',
       },
       {
         label: 'Quit',
         accelerator: 'Command+Q',
-        click() { app.quit() }
+        click() {
+          app.quit()
+        },
       },
-    ]
+    ],
   },
   {
     label: 'Edit',
@@ -51,37 +53,37 @@ const template = [
       {
         label: 'Undo',
         accelerator: 'CmdOrCtrl+Z',
-        role: 'undo'
+        role: 'undo',
       },
       {
         label: 'Redo',
         accelerator: 'Shift+CmdOrCtrl+Z',
-        role: 'redo'
+        role: 'redo',
       },
       {
-        type: 'separator'
+        type: 'separator',
       },
       {
         label: 'Cut',
         accelerator: 'CmdOrCtrl+X',
-        role: 'cut'
+        role: 'cut',
       },
       {
         label: 'Copy',
         accelerator: 'CmdOrCtrl+C',
-        role: 'copy'
+        role: 'copy',
       },
       {
         label: 'Paste',
         accelerator: 'CmdOrCtrl+V',
-        role: 'paste'
+        role: 'paste',
       },
       {
         label: 'Select All',
         accelerator: 'CmdOrCtrl+A',
-        role: 'selectall'
+        role: 'selectall',
       },
-    ]
+    ],
   },
   {
     label: 'View',
@@ -93,7 +95,7 @@ const template = [
           if (focusedWindow) {
             focusedWindow.reload()
           }
-        }
+        },
       },
       {
         label: 'Toggle Full Screen',
@@ -102,7 +104,7 @@ const template = [
           if (focusedWindow) {
             focusedWindow.setFullScreen(!focusedWindow.isFullScreen())
           }
-        }
+        },
       },
       {
         label: 'Toggle Developer Tools',
@@ -111,9 +113,9 @@ const template = [
           if (focusedWindow) {
             focusedWindow.toggleDevTools()
           }
-        }
+        },
       },
-    ]
+    ],
   },
   {
     label: 'Window',
@@ -122,21 +124,21 @@ const template = [
       {
         label: 'Minimize',
         accelerator: 'CmdOrCtrl+M',
-        role: 'minimize'
+        role: 'minimize',
       },
       {
         label: 'Close',
         accelerator: 'CmdOrCtrl+W',
-        role: 'close'
+        role: 'close',
       },
       {
-        type: 'separator'
+        type: 'separator',
       },
       {
         label: 'Bring All to Front',
-        role: 'front'
-      }
-    ]
+        role: 'front',
+      },
+    ],
   },
   {
     label: 'Help',
@@ -144,9 +146,11 @@ const template = [
     submenu: [
       {
         label: 'Learn More',
-        click() { shell.openExternal('http://electron.atom.io') }
+        click() {
+          shell.openExternal('http://electron.atom.io')
+        },
       },
-    ]
+    ],
   },
 ]
 

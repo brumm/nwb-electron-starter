@@ -1,19 +1,21 @@
-"use strict"
+'use strict'
 
-let args         = require('minimist')(process.argv.slice(2))
-const port       = args.port || 8080
-const express    = require('express')
-const app        = express()
-const electron   = require('electron')
-const proc       = require('child_process')
+let args = require('minimist')(process.argv.slice(2))
+const port = args.port || 8080
+const express = require('express')
+const app = express()
+const electron = require('electron')
+const proc = require('child_process')
 const nwbExpress = require('nwb/express')
 
-app.use(nwbExpress(express, {
-  info: false,
-  reload: true,
-  fallback: true,
-  // autoInstall: true
-}))
+app.use(
+  nwbExpress(express, {
+    info: false,
+    reload: true,
+    fallback: true,
+    // autoInstall: true
+  })
+)
 
 app.listen(port, 'localhost', function(err) {
   if (err) {
@@ -27,13 +29,13 @@ app.listen(port, 'localhost', function(err) {
     console.log('starting electron', electron)
     const child = proc.spawn(electron, ['.', '--enable-logging'], {
       env: {
-        DEV: true
+        DEV: true,
       },
-      stdio: "inherit"
+      stdio: 'inherit',
     })
 
     child.on('exit', function(code) {
       process.exit()
-    });
+    })
   }
 })

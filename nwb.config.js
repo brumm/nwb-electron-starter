@@ -1,13 +1,12 @@
-const path = require('path');
-const webpack = require('webpack');
-const package = require('./package.json');
-const ComponentDirectoryPlugin = require('component-directory-webpack-plugin');
+const path = require('path')
+const webpack = require('webpack')
+const package = require('./package.json')
 
 const cssConfig = {
   options: {
     modules: true,
-    localIdentName: '[local]-[hash:base64:10]'
-  }
+    localIdentName: '[local]-[hash:base64:10]',
+  },
 }
 
 module.exports = {
@@ -16,26 +15,25 @@ module.exports = {
   webpack: {
     extra: {
       resolve: {
-        plugins: [new ComponentDirectoryPlugin()],
         modules: [path.resolve('./src'), 'node_modules'],
-        extensions: ['.scss']
+        extensions: ['.scss'],
       },
       output: {
-        publicPath: ''
+        publicPath: '',
       },
-      target: 'electron-renderer'
+      target: 'electron-renderer',
     },
     html: {
       template: path.resolve('./src/index.html'),
-      title: package.name
+      title: package.name,
     },
     rules: {
-      'css': cssConfig,
-      'sass-css': cssConfig
-    }
+      css: cssConfig,
+      'sass-css': cssConfig,
+    },
   },
 
   babel: {
-    stage: 0
-  }
+    stage: 0,
+  },
 }
