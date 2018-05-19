@@ -1,5 +1,5 @@
 # nwb-electron-starter
 
-work-in-progress repo for my personal nwb/electron setup.
+repo for my personal nwb/electron setup, updated with semi-regularity.
 
-![](http://i.imgur.com/2sVbLRc.png)
+![](https://i.imgur.com/JggnLXB.png)
