@@ -12,11 +12,9 @@
     "server": "node dev-server.js --run-electron",
     "test": "nwb test",
     "test:watch": "nwb test --server",
-    "package":
-      "rm -rf ./release && electron-packager --overwrite --ignore='src|tests|release|public' --prune --platform=darwin --arch=x64 --out='release' ."
+    "package": "rm -rf ./release && electron-packager --overwrite --ignore='src|tests|release|public' --prune --platform=darwin --arch=x64 --out='release' ."
   },
   "dependencies": {
-    "component-directory-webpack-plugin": "^1.0.5",
     "electron-devtools-installer": "^2.2.4",
     "electron-window-state": "^4.1.1",
     "esm": "^3.0.34",
