@@ -1,6 +1,6 @@
 'use strict'
 
-let args = require('minimist')(process.argv.slice(2))
+const args = require('minimist')(process.argv.slice(2))
 const port = args.port || 8080
 const express = require('express')
 const app = express()
@@ -10,10 +10,7 @@ const nwbExpress = require('nwb/express')
 
 app.use(
   nwbExpress(express, {
-    info: false,
     reload: true,
-    fallback: true,
-    // autoInstall: true
   })
 )
 

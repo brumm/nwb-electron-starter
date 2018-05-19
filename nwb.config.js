@@ -1,5 +1,4 @@
 const path = require('path')
-const webpack = require('webpack')
 const package = require('./package.json')
 
 const cssConfig = {
@@ -16,7 +15,6 @@ module.exports = {
     extra: {
       resolve: {
         modules: [path.resolve('./src'), 'node_modules'],
-        extensions: ['.scss'],
       },
       output: {
         publicPath: '',

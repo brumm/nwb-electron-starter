@@ -3,27 +3,28 @@
   "productName": "My Electron App",
   "version": "1.0.0",
   "description": "Describe nwb-electron-starter here",
-  "main": "dist/index.js",
+  "main": "main/index.js",
   "private": true,
   "scripts": {
-    "build": "nwb build && babel main -d dist && npm run package",
-    "watch-electron-main": "babel main -d dist -w",
+    "build": "nwb build && npm run package",
     "clean": "nwb clean",
-    "start": "babel main -d dist && npm run server",
+    "start": "npm run server",
     "server": "node dev-server.js --run-electron",
     "test": "nwb test",
     "test:watch": "nwb test --server",
-    "package": "rm -rf ./release && electron-packager --overwrite --asar='true' --ignore='src|main|tests' --prune --platform=darwin --arch=x64 --out='release' ."
+    "package":
+      "rm -rf ./release && electron-packager --overwrite --ignore='src|tests|release|public' --prune --platform=darwin --arch=x64 --out='release' ."
   },
   "dependencies": {
     "component-directory-webpack-plugin": "^1.0.5",
-    "electron-devtools-installer": "^2.2.3",
+    "electron-devtools-installer": "^2.2.4",
     "electron-window-state": "^4.1.1",
+    "esm": "^3.0.34",
     "glamor": "^2.20.40",
-    "glamorous": "^4.11.4",
-    "modern-normalize": "^0.3.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "glamorous": "^4.13.0",
+    "modern-normalize": "^0.4.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
   },
   "prettier": {
     "printWidth": 100,
@@ -34,12 +35,10 @@
     "bracketSpacing": true
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "electron": "^1.8.2",
-    "electron-packager": "^11.0.0",
-    "express": "^4.16.2",
+    "babel-preset-env": "^1.7.0",
+    "electron": "^2.0.1",
+    "electron-packager": "^12.1.0",
+    "express": "^4.16.3",
     "minimist": "^1.2.0",
     "nwb": "^0.21.5",
     "webpack": "^3.11.0"
