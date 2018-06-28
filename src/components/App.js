@@ -1,9 +1,9 @@
 import React from 'react'
-import glamorous from 'glamorous'
+import styled from 'react-emotion'
 
 import Titlebar from 'components/Titlebar'
 
-const Container = glamorous.div({
+const Container = styled('div')({
   width: '100vw',
   height: '100vh',
   display: 'flex',

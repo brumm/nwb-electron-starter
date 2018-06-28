@@ -17,12 +17,12 @@
   "dependencies": {
     "electron-devtools-installer": "^2.2.4",
     "electron-window-state": "^4.1.1",
+    "emotion": "^9.2.4",
     "esm": "^3.0.34",
-    "glamor": "^2.20.40",
-    "glamorous": "^4.13.0",
     "modern-normalize": "^0.4.0",
     "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "react-dom": "^16.3.2",
+    "react-emotion": "^9.2.4"
   },
   "prettier": {
     "printWidth": 100,

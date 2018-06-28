@@ -1,6 +1,6 @@
-import glamorous from 'glamorous'
+import styled from 'react-emotion'
 
-export default glamorous.div({
+export default styled('div')({
   height: 38,
   padding: '0 10px',
   display: 'flex',
