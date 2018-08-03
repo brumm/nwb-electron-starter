@@ -4,7 +4,7 @@ import windowStateKeeper from 'electron-window-state'
 import installExtension, { REACT_DEVELOPER_TOOLS } from 'electron-devtools-installer'
 
 const { DEV, PORT = '8080' } = process.env
-const windowUrl = DEV ? `http://0.0.0.0:${PORT}/` : `file://${app.getAppPath()}/dist/index.html`
+const windowUrl = DEV ? `http://localhost:${PORT}/` : `file://${app.getAppPath()}/dist/index.html`
 
 let mainWindow
 
