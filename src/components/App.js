@@ -1,9 +1,9 @@
 import React from 'react'
-import styled from 'react-emotion'
+import styled from 'styled-components'
 
 import Titlebar from 'components/Titlebar'
 
-const Container = styled('div')({
+const Container = styled.div({
   width: '100vw',
   height: '100vh',
   display: 'flex',

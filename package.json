@@ -16,13 +16,12 @@
   },
   "dependencies": {
     "electron-devtools-installer": "^2.2.4",
-    "electron-window-state": "^4.1.1",
-    "emotion": "^9.2.4",
+    "electron-window-state": "^5.0.3",
     "esm": "^3.0.55",
     "modern-normalize": "^0.5.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-emotion": "^9.2.4"
+    "styled-components": "^4.4.0"
   },
   "prettier": {
     "printWidth": 100,
@@ -34,11 +33,11 @@
   },
   "devDependencies": {
     "babel-preset-env": "^1.7.0",
-    "electron": "^2.0.3",
-    "electron-packager": "^12.1.0",
+    "electron": "^6.0.10",
+    "electron-packager": "^14.0.6",
     "express": "^4.16.3",
     "minimist": "^1.2.0",
-    "nwb": "0.21.x"
+    "nwb": "0.23.0"
   },
   "author": "",
   "license": "MIT",
