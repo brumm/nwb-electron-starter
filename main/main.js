@@ -29,6 +29,7 @@ installExtension(REACT_DEVELOPER_TOOLS)
       titleBarStyle: 'hiddenInset',
       webPreferences: {
         webSecurity: false,
+        nodeIntegration: true,
       },
       show: false,
     })
