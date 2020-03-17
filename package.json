@@ -36,7 +36,7 @@
     "electron": "^6.0.10",
     "electron-packager": "^14.0.6",
     "express": "^4.16.3",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.2",
     "nwb": "0.23.0"
   },
   "author": "",
