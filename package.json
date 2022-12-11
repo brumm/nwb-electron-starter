@@ -35,7 +35,7 @@
     "babel-preset-env": "^1.7.0",
     "electron": "^6.0.10",
     "electron-packager": "^14.0.6",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "minimist": "^1.2.0",
     "nwb": "0.23.0"
   },
